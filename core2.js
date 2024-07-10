@@ -15,6 +15,9 @@ function clearStoneMap()
 }
 function putStone(type,x,y)
 {
+	  // Play a sound when a stone is placed
+  var audio = new Audio('stone_sound.mp3'); // replace with your sound file
+  audio.play();
 	if(stoneMap[x+y*stoneMapSize]!=0)
 	{
 		return;
